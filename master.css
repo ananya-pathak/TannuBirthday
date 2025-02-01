@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Gloria+Hallelujah&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    background-image: url(./Images/bg.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+.start-box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.start-box img{
+    width: 200px;
+    transform: rotateZ(-10deg);
+    animation: jump 1.2s infinite;
+
+}
+@keyframes jump {
+    0% { transform: translate(0%, 0%) scale(1.25, 0.75); }
+    50% { transform: translate(0%, -50%) scale(1, 1); }
+    55% { transform: translate(0%, -50%) rotate(15deg); }
+    60% { transform: translate(0%, -50%) rotate(-15deg); }
+    65% { transform: translate(0%, -50%) rotate(15deg); }
+    70% { transform: translate(0%, -50%) rotate(-15deg); }
+    100% { transform: translate(0%, -0%) scale(1.25, 0.75); }
+}
+
+.start-box p{
+    display: flex;
+    align-items: center;
+    font-family: "Borel", serif;
+    font-weight: 800;
+    font-size: 36px;
+    padding-top: 30px;
+    animation: annu 1.5s infinite;
+}
+.start-box p img{
+    width: 30px;
+    margin-right: 10px;
+    animation: none;
+}
+@keyframes annu{
+    0% {
+        transform: scale(1)
+    }
+
+    25% {
+        transform: scale(1.25)
+    }
+
+    45% {
+        transform: scale(1.5)
+    }
+}
+.start-box button{
+    background-color: #007791;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-family: "Borel", serif;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 12px 25px 0px 25px;
+}
+.cards-box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 40;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    
+}
+
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color: #fff;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    filter: opacity(1%);
+    box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
+    padding: 10px 10px 0px 10px;
+}
+
+.card-img img {
+    width: 300px;
+    border-radius: 4px;
+}
+
+.card-content {
+    width: 100%;
+    height: fit-content;
+
+}
+
+.card-content p {
+    font-family: "Borel", serif;
+    font-size: 26px;
+    font-weight: 600px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 12px;
+}
+
+.card-1 {
+    animation: rotate1 3s cubic-bezier(1, 0, 0.2, 1) forwards;
+    transform: translate(-50%, -50%) rotateZ(-5deg);
+    animation-delay: 1s;
+    z-index: 20;
+    
+}
+
+@keyframes rotate1 {
+    0% {
+        top: 50%;
+        left: 50%;
+        filter: opacity(100%);
+    }
+
+    100% {
+        top: 0%;
+        left: 0%;
+        transform: translate(-50%, -50%) rotateZ(-40deg) scale(0.5);
+        filter: opacity(100%);
+    }
+}
+
+.card-2 {
+    animation: rotate2 3s cubic-bezier(1, 0, 0.2, 1) forwards;
+    transform: translate(-50%, -50%) rotateZ(15deg);
+    animation-delay: 4s;
+    z-index: 19;
+}
+
+@keyframes rotate2 {
+    0% {
+        top: 50%;
+        left: 50%;
+        filter: opacity(100%);
+    }
+
+    100% {
+        top: 0%;
+        left: 100%;
+        transform: translate(-50%, -50%) rotateZ(30deg) scale(0.5);
+        filter: opacity(100%);
+    }
+}
+
+.card-3 {
+    animation: rotate3 3s cubic-bezier(1, 0, 0.2, 1) forwards;
+    transform: translate(-50%, -50%) rotateZ(-15deg);
+    animation-delay: 7s;
+    z-index: 18;
+}
+
+@keyframes rotate3 {
+    0% {
+        top: 50%;
+        left: 50%;
+        filter: opacity(100%);
+    }
+
+    100% {
+        top: 100%;
+        left: 100%;
+        transform: translate(-50%, -50%) rotateZ(30deg) scale(0.5);
+        filter: opacity(100%);
+    }
+}
+
+.card-4 {
+    animation: rotate4 3s cubic-bezier(1, 0, 0.2, 1) forwards;
+    transform: translate(-50%, -50%) rotateZ(15deg);
+    animation-delay: 10s;
+    z-index: 17;
+}
+
+@keyframes rotate4 {
+    0% {
+        top: 50%;
+        left: 50%;
+        filter: opacity(100%);
+    }
+
+    100% {
+        top: 100%;
+        left: 5%;
+        transform: translate(-50%, -50%) rotateZ(-30deg) scale(0.5);
+        filter: opacity(100%);
+    }
+}
+
+.card-5 {
+    animation: rotate5 3s cubic-bezier(1, 0, 0.2, 1) forwards;
+    transform: translate(-50%, -50%) rotateZ(-1deg);
+    animation-delay: 13s;
+    z-index: 16;
+
+}
+
+@keyframes rotate5 {
+    0% {
+        top: 50%;
+        left: 50%;
+        filter: opacity(100%);
+    }
+
+    100% {
+        top: 25%;
+        left: -15%;
+        transform: translate(-50%, -50%) rotateZ(15deg) scale(0.5);
+        filter: opacity(100%);
+    }
+}
+
+.card-6 {
+    animation: rotate6 3s cubic-bezier(1, 0, 0.2, 1) forwards;
+    transform: translate(-50%, -50%) rotateZ(10deg);
+    animation-delay: 16s;
+    z-index: 15;
+}
+
+@keyframes rotate6 {
+    0% {
+        top: 50%;
+        left: 50%;
+        filter: opacity(100%);
+    }
+
+    100% {
+        top: 25%;
+        left: 111%;
+        transform: translate(-50%, -50%) rotateZ(-5deg) scale(0.5);
+        filter: opacity(100%);
+    }
+}
+
+.card-7 {
+    animation: rotate7 3s cubic-bezier(1, 0, 0.2, 1) forwards;
+    transform: translate(-50%, -50%) rotateZ(-20deg);
+    animation-delay: 19s;
+    z-index: 14;
+}
+
+@keyframes rotate7 {
+    0% {
+        top: 50%;
+        left: 50%;
+        filter: opacity(100%);
+    }
+
+    100% {
+        top: 80%;
+        left: -10%;
+        transform: translate(-50%, -50%) rotateZ(12deg) scale(0.5);
+        filter: opacity(100%);
+    }
+}
+
+.card-8 {
+    animation: rotate8 3s cubic-bezier(1, 0, 0.2, 1) forwards;
+    transform: translate(-50%, -50%) rotateZ(25deg);
+    animation-delay: 22s;
+    z-index: 13;
+}
+
+@keyframes rotate8 {
+    0% {
+        top: 50%;
+        left: 50%;
+        filter: opacity(100%);
+    }
+
+    100% {
+        top: 73%;
+        left: 113%;
+        transform: translate(-50%, -50%) rotateZ(8deg) scale(0.5);
+        filter: opacity(100%);
+    }
+}
+
+.card-9 {
+    animation: rotate9 3s cubic-bezier(1, 0, 0.2, 1) forwards;
+    transform: translate(-50%, -50%) rotateZ(-30deg);
+    animation-delay: 25s;
+    z-index: 12;
+}
+
+@keyframes rotate9 {
+    0% {
+        top: 50%;
+        left: 50%;
+        filter: opacity(100%);
+    }
+
+    100% {
+        top: -7%;
+        left: 52%;
+        transform: translate(-50%, -50%) rotateZ(5deg) scale(0.5);
+        filter: opacity(100%);
+    }
+}
+
+.card-10 {
+    animation: rotate10 3s cubic-bezier(1, 0, 0.2, 1) forwards;
+    transform: translate(-50%, -50%) rotateZ(10deg);
+    animation-delay: 28s;
+    z-index: 11;
+}
+
+@keyframes rotate10 {
+    0% {
+        top: 50%;
+        left: 50%;
+        filter: opacity(100%);
+    }
+
+    100% {
+        top: 105%;
+        left: 48%;
+        transform: translate(-50%, -50%) rotateZ(99deg) scale(0.5);
+        filter: opacity(100%);
+    }
+}
+
+.card-11 {
+    animation: rotate11 3s cubic-bezier(1, 0, 0.2, 1) forwards;
+    transform: translate(-50%, -50%) rotateZ(-23deg);
+    animation-delay: 31s;
+    z-index: 10;
+}
+
+@keyframes rotate11 {
+    0% {
+        top: 50%;
+        left: 50%;
+        filter: opacity(100%);
+    }
+
+    100% {
+        top: 50%;
+        left: -16%;
+        transform: translate(-50%, -50%) rotateZ(0deg) scale(0.5);
+        filter: opacity(100%);
+    }
+}
+.card-12 {
+    animation: rotate12 3s cubic-bezier(1, 0, 0.2, 1) forwards;
+    transform: translate(-50%, -50%) rotateZ(-23deg);
+    animation-delay: 34s;
+    z-index: 9;
+}
+
+@keyframes rotate12 {
+    0% {
+        top: 50%;
+        left: 50%;
+        filter: opacity(100%);
+    }
+
+    100% {
+        top: 50%;
+        left: 116%;
+        transform: translate(-50%, -50%) rotateZ(-11deg) scale(0.5);
+        filter: opacity(100%);
+    }
+}
+.text{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    transform: scale(0);
+    animation: text 0.4s cubic-bezier(0.6, 0, 0.1, 1) forwards;
+    animation-delay: 37s;
+
+}
+.text h1{
+    font-family: "Gloria Hallelujah", serif;
+    font-size: 28px;
+    font-weight: 400px;
+    color: rgb(24,24,24);
+    text-align: center;
+    /* animation: text2 1.5s  infinite; */
+    animation-delay: 0.2s;
+}
+.text h2{
+    font-family: "Gloria Hallelujah", serif;
+    font-size: 70px;
+    font-weight: 600;
+    color:#007791;
+    margin-top: -30px;
+    animation: text2 1.5s  infinite;
+    animation-delay: 0.2s;
+    transform: rotateZ(-10deg);
+    padding-top: 20px;
+    
+}
+.text img{
+    width: 200px;
+    padding-top: 20px;
+}
+@keyframes text{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes text2{
+    0% {
+        transform: scale(1) rotateZ(-10deg)
+    }
+
+    25% {
+        transform: scale(1.25) rotateZ(-10deg)
+    }
+
+    45% {
+        transform: scale(1.5) rotateZ(-10deg)
+    }
+}
